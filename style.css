@@ -1,9 +1,9 @@
 /* Global styles */
 body {
     background-color: black !important;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #333;
-    margin: 0; /* Remove default margins to avoid overflow */
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -14,7 +14,6 @@ body {
   #container {
     max-width: 400px;
     width: 100%; /* Allow the container to resize on smaller screens */
-    max-height: 700px !important;
     margin: 20px auto;
     padding: 20px;
     border: 3px solid #333;
@@ -25,7 +24,7 @@ body {
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem; /* Adjusted to make the title smaller */
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
@@ -38,9 +37,10 @@ body {
     text-align: right;
     background-color: #e9ecef;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px;
     color: #333;
     border-radius: 10px;
+    margin-bottom: 10px; /* Space between the display and buttons */
   }
   
   #buttons-container {
@@ -60,19 +60,22 @@ body {
   
   .col {
     padding: 5px; /* Add padding to columns */
+    display: flex;
+    justify-content: center;
   }
   
   /* Buttons */
   .button {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 0.9rem; /* Reduce the font size */
     text-align: center;
-    padding: 20px;
+    padding: 8px 10px; /* Reduce padding for smaller buttons */
     margin: 5px;
     border-radius: 10px;
     cursor: pointer;
     background-color: lightgreen !important;
-    flex-grow: 1; /* Allow buttons to grow and take space equally */
+    width: 100%; /* Make buttons fill available space */
+    max-width: 60px; /* Set max width to avoid excessive growth */
+    box-sizing: border-box; /* Ensure padding doesn't overflow the container */
   }
   
   .button:hover {
@@ -127,8 +130,8 @@ body {
   /* Fix layout distortion on GitHub Pages */
   @media (max-width: 576px) {
     #container {
-      max-width: 100%; /* Make sure container width is responsive on small screens */
-      padding: 10px; /* Reduce padding for smaller screens */
+      max-width: 100%;
+      padding: 10px;
     }
   
     h1 {
@@ -136,8 +139,9 @@ body {
     }
   
     .button {
-      padding: 15px; /* Adjust button padding for small screens */
-      font-size: 1.2rem; /* Adjust font size of buttons */
+      padding: 8px 10px; /* Reduce button padding on mobile */
+      font-size: 1rem; /* Further reduce font size of buttons on mobile */
+      max-width: 50px; /* Set smaller max-width for mobile */
     }
   
     .row {
