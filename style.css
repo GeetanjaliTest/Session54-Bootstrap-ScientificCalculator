@@ -3,16 +3,25 @@ body {
     background-color: black !important;
     font-family: 'Arial', sans-serif;
     color: #333;
+    margin: 0; /* Remove default margins to avoid overflow */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure body takes full height */
   }
   
   #container {
     max-width: 400px;
+    width: 100%; /* Allow the container to resize on smaller screens */
     max-height: 700px !important;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     border: 3px solid #333;
     border-radius: 10px;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
   }
   
   h1 {
@@ -39,8 +48,21 @@ body {
     border-radius: 10px;
     padding: 10px;
     background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
   }
   
+  .row {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; /* Adjust to fit buttons well */
+  }
+  
+  .col {
+    padding: 5px; /* Add padding to columns */
+  }
+  
+  /* Buttons */
   .button {
     font-size: 1.5rem;
     font-weight: bold;
@@ -50,6 +72,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     background-color: lightgreen !important;
+    flex-grow: 1; /* Allow buttons to grow and take space equally */
   }
   
   .button:hover {
@@ -101,13 +124,24 @@ body {
     background-color: #e67e22;
   }
   
-  .row {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-  }
+  /* Fix layout distortion on GitHub Pages */
+  @media (max-width: 576px) {
+    #container {
+      max-width: 100%; /* Make sure container width is responsive on small screens */
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
   
-  .button {
-    width: 100%;
+    h1 {
+      font-size: 2rem; /* Make heading smaller on mobile */
+    }
+  
+    .button {
+      padding: 15px; /* Adjust button padding for small screens */
+      font-size: 1.2rem; /* Adjust font size of buttons */
+    }
+  
+    .row {
+      flex-wrap: wrap; /* Allow buttons to wrap in rows */
+    }
   }
   
