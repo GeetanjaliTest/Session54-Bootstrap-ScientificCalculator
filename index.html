@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container" class="container mt-4">
+    <h1 class="text-center">Scientific Calculator</h1>
+    <hr>
+    <div class="calculator">
+      <div class="display mb-3">
+        <input id="output" type="text" class="form-control" disabled />
+      </div>
+
+      <div id="buttons-container">
+        <div id="buttons">
+          <div class="row">
+            <div class="col button btn btn-light" id="clear">C</div>
+            <div class="col button btn btn-light">π</div>
+            <div class="col button btn btn-light function">sqrt</div>
+            <div class="col button btn btn-light function">sq</div>
+            <div class="col button btn btn-light function">%</div>
+          </div>
+          <div class="row">
+            <div class="col button btn btn-light function">log</div>
+            <div class="col button btn btn-light function">sin</div>
+            <div class="col button btn btn-light operator">^</div>
+            <div class="col button btn btn-light operator">+/-</div>
+            <div class="col button btn btn-light operator">÷</div>
+          </div>
+          <div class="row">
+            <div class="col button btn btn-light function">cos</div>
+            <div class="col button btn btn-light number">7</div>
+            <div class="col button btn btn-light number">8</div>
+            <div class="col button btn btn-light number">9</div>
+            <div class="col button btn btn-light operator">x</div>
+          </div>
+          <div class="row">
+            <div class="col button btn btn-light function">tan</div>
+            <div class="col button btn btn-light number">4</div>
+            <div class="col button btn btn-light number">5</div>
+            <div class="col button btn btn-light number">6</div>
+            <div class="col button btn btn-light operator">-</div>
+          </div>
+          <div class="row">
+            <div class="col button btn btn-light" id="radians">radians</div>
+            <div class="col button btn btn-light number">1</div>
+            <div class="col button btn btn-light number">2</div>
+            <div class="col button btn btn-light number">3</div>
+            <div class="col button btn btn-light operator">+</div>
+          </div>
+          <div class="row">
+            <div class="col button btn btn-light" id="degrees">degrees</div>
+            <div class="col button btn btn-light number" id="zero">0</div>
+            <div class="col button btn btn-light" id=".">.</div>
+            <div class="col button btn btn-light" id="equals">=</div>
+            <div class="col button btn btn-light function" id="factorial">n!</div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
